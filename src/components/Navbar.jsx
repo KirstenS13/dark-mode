@@ -12,6 +12,7 @@ const Navbar = () => {
     <nav className="navbar">
       <Link to="/" style={{textDecoration: "none"}}><h1 className="link">Crypto Tracker</h1></Link>
       <Link to="/charts" style={{textDecoration: "none"}}><h4 className="link navItem">View Charts</h4></Link>
+      <Link to="/info" style={{textDecoration: "none"}}><h4 className="link navItem">Coin Info</h4></Link>
       <div className="dark-mode__toggle">
         <div
           onClick={toggleMode}
