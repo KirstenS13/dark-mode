@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const CoinInfo = (props) => {
-    const [coinValue, setCoinValue] = useState('coin');
+    const [coinValue, setCoinValue] = useState('');
 
     useEffect(() => {
+        console.log('coinValue', coinValue)
         axios
-            .get(`https://www.coingecko.com/en/api/coins/${coinValue}`)
+            .get(`https://api.coingecko.com/api/vs/coins/${coinValue}`)
             .then(res => {
                 console.log(res);
             })
@@ -31,7 +32,6 @@ const CoinInfo = (props) => {
             <form>
                 <label htmlFor="coins">Find a coin:</label>
                 <select name="coins" id="coins" onChange={changeHandler}>
-                    <option value="" key={Date.now()}>Select a coin...</option>
                     {props.coinData.map(coin => {
                         return (
                             <option value={coin.id} key={coin.id} >{coin.id}</option>
