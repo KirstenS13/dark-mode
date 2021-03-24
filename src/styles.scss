@@ -178,7 +178,40 @@ img {
   -webkit-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   -moz-box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
   box-shadow: 0px 2px 15px -8px rgba(0, 0, 0, 0.42);
+
+  //my styles
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .navItem {
+    background-color: #f68819;
+    padding: 10px;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 12rem;
+  }
+  //end my styles
 }
+
+//my styles
+.homepage {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+
+  h2 {
+    font-size: 3rem;
+    padding: 20px;
+  }
+
+  p {
+    font-size: 1.8rem;
+    padding: 10px;
+  }
+}
+//end my styles
 
 .dark-mode__toggle {
   background: papayawhip;
@@ -249,5 +282,19 @@ text-align: left;
   .navbar {
     background-color: #1F2022;
     border: none;
+
+    .link {
+      color: #f68819;
+    }
+
+    .navItem {
+      background-color: #313843;
+      color: #f68819;
+      border: 1px solid #f68819;
+    }
+  }
+
+  .homepage {
+    color: #f68819;
   }
 }
